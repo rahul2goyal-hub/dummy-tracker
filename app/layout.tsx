@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css"; // This imports your styles
+import './globals.css';
+
 
 export const metadata: Metadata = {
   title: "Team Tracker",
