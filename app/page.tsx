@@ -2,7 +2,10 @@
 import { useState, useEffect } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import { Bell, Paperclip, Loader2, LogOut } from 'lucide-react'
-
+const handleLogout = async () => {
+  await supabase.auth.signOut()
+  router.push('/login')
+}
 export default function ProTracker() {
   const [tasks, setTasks] = useState<any[]>([])
   const [newTask, setNewTask] = useState('')
